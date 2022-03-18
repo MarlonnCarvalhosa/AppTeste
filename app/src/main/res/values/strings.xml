@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Teste Sportheca</string>
+    <string name="text_world_cups_won">Copas do Mundo Vencidas</string>
+    <string name="text_world_cups_disputed">Copas do Mundo Disputadas</string>
+</resources>

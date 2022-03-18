@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_photo"
+        app:layout_constraintStart_toStartOf="@+id/img_photo"
+        app:layout_constraintTop_toBottomOf="@+id/img_photo"
+        tools:text="Usuário de teste" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_photo"
+        app:layout_constraintStart_toStartOf="@+id/img_photo"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_name"
+        tools:text="Usuário de teste" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_photo"
+        app:layout_constraintStart_toStartOf="@+id/img_photo"
+        app:layout_constraintTop_toBottomOf="@+id/text_country"
+        tools:text="Usuário de teste" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_circle"
+        app:layout_constraintEnd_toEndOf="@+id/text_percentual"
+        app:layout_constraintStart_toStartOf="@+id/text_percentual"
+        app:layout_constraintTop_toTopOf="@+id/text_percentual"
+        app:layout_constraintBottom_toBottomOf="@+id/text_percentual"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_percentual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_position"
+        tools:text="59.154" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_world_cups_won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/text_world_cups_won"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/progressBar"
+        android:layout_width="0dp"
+        android:progressDrawable="@drawable/progress_drawable"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:maxHeight="20dip"
+        android:minHeight="30dip"
+        android:progress="50"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_world_cups_won"
+        app:layout_constraintTop_toBottomOf="@+id/text_world_cups_won" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_pla_won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/progress_bar"
+        android:layout_marginStart="30dp"
+        android:text="20"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_pos_won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginStart="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_pla_won"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/progress_bar"
+        app:layout_constraintTop_toTopOf="@+id/text_pla_won" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_world_cups_disputed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/text_world_cups_disputed"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_bar_disputed"
+        style="@style/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:indeterminate="false"
+        android:maxHeight="20dip"
+        android:minHeight="30dip"
+        android:progress="50"
+        android:progressDrawable="@drawable/progress_drawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_world_cups_disputed"
+        app:layout_constraintTop_toBottomOf="@+id/text_world_cups_disputed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_pla_diputed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/progress_bar_disputed"
+        android:layout_marginStart="30dp"
+        android:text="20"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_bar_disputed"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar_disputed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_pos_diputed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="6dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_bar_disputed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/progress_bar_disputed"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar_disputed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
